@@ -100,3 +100,14 @@
 .captcha {
   margin-top: 1rem;
 }
+
+.error {
+  border: 0.5px solid red;
+}
+
+.error-text {
+  font-size: small;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: red;
+}

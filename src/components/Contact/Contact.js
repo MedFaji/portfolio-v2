@@ -13,29 +13,55 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const [capVal, setCapVal] = useState(null);
+  const [formErrors, setFormErrors] = useState({});
   const form = useRef();
+
+  const validateForm = () => {
+    const errors = {}; // create variable that is going to be setted on the final state
+    if (!form.current.from_name.value.trim()) {
+      errors.name = "Name is required";
+    }
+    if (!form.current.from_email.value.trim()) {
+      errors.email = "Email is required";
+    } else if (
+      !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(
+        form.current.from_email.value
+      )
+    ) {
+      errors.email = "Invalid email address";
+    }
+    if (!form.current.message.value.trim()) {
+      errors.message = "Message is required";
+    }
+
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_xtib35q",
-        "template_p5evi2b",
-        form.current,
-        "jKhHRvLAf0qlKkpTY"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          e.target.reset();
-          alert("Email has been sent successfully !");
-        },
-        (error) => {
-          console.log(error.text);
-          e.target.reset();
-          alert("Email has not been sent, try later !");
-        }
-      );
+    if (validateForm()) {
+      emailjs
+        .sendForm(
+          "service_xtib35q",
+          "template_p5evi2b",
+          form.current,
+          "jKhHRvLAf0qlKkpTY"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            e.target.reset();
+            alert("Email has been sent successfully!");
+          },
+          (error) => {
+            console.log(error.text);
+            e.target.reset();
+            alert("Email has not been sent, try later!");
+          }
+        );
+    }
   };
 
   return (
@@ -63,22 +89,27 @@ const Contact = () => {
         <form className="contact-form" ref={form} onSubmit={sendEmail}>
           <input
             type="text"
-            className="name"
+            className={`name ${formErrors.name ? "error" : ""}`}
             placeholder="Your Name"
             name="from_name"
           />
+          {formErrors.name && <p className="error-text">{formErrors.name}</p>}
           <input
             type="email"
-            className="email"
+            className={`email ${formErrors.email ? "error" : ""}`}
             placeholder="Your Email"
             name="from_email"
           />
+          {formErrors.email && <p className="error-text">{formErrors.email}</p>}
           <textarea
-            className="msg"
+            className={`msg ${formErrors.message ? "error" : ""}`}
             name="message"
             rows="5"
             placeholder="Your Message"
           ></textarea>
+          {formErrors.message && (
+            <p className="error-text">{formErrors.message}</p>
+          )}
           <ReCAPTCHA
             className="captcha"
             sitekey="6LdPIGYpAAAAANyGRqhinsJe99Y46YzdAoE7DSdK"
