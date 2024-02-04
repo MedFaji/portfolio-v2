@@ -10,14 +10,14 @@ const Intro = () => {
       <div className="intro-content">
         <span className="hello">Hello,</span>
         <span className="intro-text">
-          I'm <span className="intro-name">Mohamed Faji</span> <br /> Full Stack
-          Web Developer
+          I'm <span className="intro-name">Mohamed Faji</span> <br /> Junior
+          Software Engineer
         </span>
         <p className="intro-para">
-          Recent Master's graduate in Information Systems Engineering and
-          aspiring Junior Full Stack Web Developer. Eager to contribute
-          innovation to collaborative projects and embrace the dynamic
-          challenges of the tech world.
+          Recent Master's graduate in Information Systems Engineering and a
+          dynamic Junior Software Engineer with a passion for innovation and a
+          drive for delivering top-notch web experiences. Eager to learn and
+          committed to excellence in code. Ready to make an impact!
         </p>
         <Link to="contact">
           <button className="btn">

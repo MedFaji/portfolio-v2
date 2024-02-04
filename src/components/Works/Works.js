@@ -12,9 +12,8 @@ const Works = () => {
     <section id="works">
       <h2 className="works-title">Portfolio</h2>
       <span className="works-desc">
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature from 45 BC, making it
-        over 2000 years old.
+        Showcasing a portfolio of dynamic projects that reflect my passion for
+        innovation and commitment to delivering impactful solutions.
       </span>
       <div className="works-images">
         <img src={portfolio1} alt="" className="works-img" />

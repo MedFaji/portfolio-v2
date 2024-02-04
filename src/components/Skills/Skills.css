@@ -48,8 +48,8 @@
 }
 
 .skill-bar-text > p {
-  font-size: 0.8rem;
-  font-weight: 200;
+  font-size: 0.85rem;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 720px) {
