@@ -66,7 +66,7 @@ const Contact = () => {
 
   return (
     <section id="contact-page">
-      <div id="clients">
+      {/* <div id="clients">
         <h1 className="clients-page-title">My clients</h1>
         <p className="clients-desc">
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -79,7 +79,7 @@ const Contact = () => {
           <img src={facebook} alt="facebook" className="client-img" />
           <img src={microsoft} alt="microsoft" className="client-img" />
         </div>
-      </div>
+      </div> */}
       <div id="contact">
         <h1 className="clients-page-title">Contact Me</h1>
         <p className="clients-desc">

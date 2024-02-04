@@ -16,9 +16,12 @@
 .logo {
   object-fit: cover;
   height: 3rem;
-  width: 4rem;
+  width: 5rem;
 }
 
+.desktop-menu-btn span {
+  padding-right: 1rem;
+}
 .desktop-menu-list-item {
   margin: 1rem;
   cursor: pointer;
@@ -92,4 +95,8 @@
   .desktop-menu-btn {
     display: none;
   }
+}
+
+.desktop-menu {
+  margin-left: 6rem;
 }

@@ -44,7 +44,7 @@ const NavBar = () => {
         >
           Portfolio
         </Link>
-        <Link
+        {/* <Link
           activeClass="active"
           to="clients"
           spy={true}
@@ -54,7 +54,7 @@ const NavBar = () => {
           className="desktop-menu-list-item"
         >
           Clients
-        </Link>
+        </Link> */}
       </div>
 
       <button
@@ -66,7 +66,7 @@ const NavBar = () => {
         }}
       >
         <img src={contact_img} className="desktop-menu-img" alt="Logo" />
-        Contact me
+        <span>Contact me</span>
       </button>
 
       <img
@@ -120,7 +120,7 @@ const NavBar = () => {
         >
           Portfolio
         </Link>
-        <Link
+        {/* <Link
           activeClass="active"
           to="clients"
           spy={true}
@@ -133,7 +133,7 @@ const NavBar = () => {
           }}
         >
           Clients
-        </Link>
+        </Link> */}
         <Link
           activeClass="active"
           to="contact"
