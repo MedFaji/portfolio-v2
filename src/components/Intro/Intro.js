@@ -15,10 +15,9 @@ const Intro = () => {
         </span>
         <p className="intro-para">
           Recent Master's graduate in Information Systems Engineering and
-          aspiring <br />
-          Junior Full Stack Web Developer. Eager to contribute innovation
-          <br /> to collaborative projects and embrace the dynamic challenges of
-          the tech world.
+          aspiring Junior Full Stack Web Developer. Eager to contribute
+          innovation to collaborative projects and embrace the dynamic
+          challenges of the tech world.
         </p>
         <Link to="contact">
           <button className="btn">

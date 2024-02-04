@@ -39,6 +39,7 @@
 .intro-para {
   font-size: medium;
   font-weight: 300;
+  max-width: 40rem;
 }
 
 .btn {
@@ -50,6 +51,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
 .btn-img {

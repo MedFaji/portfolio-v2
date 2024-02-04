@@ -39,6 +39,11 @@
   margin: 0.5rem;
 }
 
+.works-img:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
 .works-btn {
   margin: 2rem 0;
   padding: 0.5rem 2.5rem;
@@ -47,6 +52,11 @@
   background: white;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.works-btn:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
 @media screen and (max-width: 585px) {
