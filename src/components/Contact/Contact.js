@@ -82,10 +82,7 @@ const Contact = () => {
       </div> */}
       <div id="contact">
         <h1 className="clients-page-title">Contact Me</h1>
-        <p className="clients-desc">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </p>
+        <p className="clients-desc">We look forward to hearing from you!</p>
         <form className="contact-form" ref={form} onSubmit={sendEmail}>
           <input
             type="text"
